@@ -39,9 +39,22 @@ class Stack:
             self.head = self.head.next
             poppednode.next = None
             return poppednode.data
+
+    # Returns the head node data
     def peek(self):
 
         if self.isempty():
             return None
         else:
             return self.head.data
+
+    # Prints out the stack
+    def display(self):
+        iternode = self.head
+        if self.isempty():
+            print("Stack Underflow")
+        else:
+            while(iternode != None):
+                print(iternode.data, "->", end= " ")
+                iternode = iternode.next
+            return
