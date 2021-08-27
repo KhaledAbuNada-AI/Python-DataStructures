@@ -47,7 +47,7 @@ print(s)
 
 s.get()
 s.get()
-s.get()
+# s.get()
 
 # s.get_nowait()
 
