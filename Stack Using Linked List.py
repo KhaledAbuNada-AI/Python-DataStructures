@@ -58,3 +58,26 @@ class Stack:
                 print(iternode.data, "->", end= " ")
                 iternode = iternode.next
             return
+
+MyStack = Stack()
+
+MyStack.push(2)
+MyStack.push(4)
+MyStack.push(6)
+MyStack.push(8)
+
+# Display stack elements
+MyStack.display()
+
+# Print top element of stack
+print("\nTop element is ",MyStack.peek())
+
+# Delete top elements of stack
+MyStack.pop()
+MyStack.pop()
+
+# Display stack elements
+MyStack.display()
+
+# Print top element of stack
+print("\nTop element is ", MyStack.peek())
