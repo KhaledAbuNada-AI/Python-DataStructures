@@ -26,9 +26,10 @@ class CircularQueue():
             self.queue[self.rear] = data
 
     def dequeue(self):
-        if self.front == -1:
+        if self.front == -1: # condition for empty queue
             return "Queue is Empty\n"
 
+        # condition for only one element
         elif self.front == self.rear:
             temp = self.queue[self.front]
             self.front = -1
@@ -39,3 +40,46 @@ class CircularQueue():
             temp = self.queue[self.front]
             self.front = (self.front + 1) % self.size
             return temp
+
+    def display(self):
+
+        # condition for empty queue
+        if self.front == -1:
+            return "Queue is Empty"
+
+        elif self.rear >= self.front:
+            print("Elements in the circular queue are:", end=" ")
+
+            for i in range(self.front, self.rear + 1):
+                print(self.queue[i], end=" ")
+        else:
+            print("Elements in Circular Queue are:",
+                  end=" ")
+            for i in range(self.front, self.size):
+                print(self.queue[i], end=" ")
+            for i in range(0, self.rear + 1):
+                print(self.queue[i], end=" ")
+
+        if (self.rear + 1) % self.size == self.front:
+            print("Queue is Full")
+
+#Run Coed
+ob = CircularQueue(5)
+ob.enqueue(120)
+ob.enqueue(180)
+ob.enqueue(163)
+ob.enqueue(155)
+ob.enqueue(69)
+ob.display()
+
+print("Deleted value = ", ob.dequeue())
+print("Deleted value = ", ob.dequeue())
+ob.enqueue(9)
+ob.enqueue(20)
+ob.enqueue(5)
+print("Deleted value = ", ob.dequeue())
+print("Deleted value = ", ob.dequeue())
+print("Deleted value = ", ob.dequeue())
+print("Deleted value = ", ob.dequeue())
+print("Deleted value = ", ob.dequeue())
+print(ob.display())
