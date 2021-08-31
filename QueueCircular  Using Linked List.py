@@ -58,3 +58,33 @@ def displayQueue(q):
         print(temp.data, end=" ")
         temp = temp.link
     print(temp.data)
+
+# Run Code
+if __name__ == "__main__":
+    # Create a queue and initialize
+    # front and rear
+    q = Queue()
+    q.front = q.rear = None
+
+    # Inserting elements in Circular Queue
+    enQueue(q, 55)
+    enQueue(q, 22)
+    enQueue(q, 10)
+
+    # Display elements present in
+    # Circular Queue
+    displayQueue(q)
+
+    # Deleting elements from Circular Queue
+    print("Deleted value = ", deQueue(q))
+    print("Deleted value = ", deQueue(q))
+
+    # Remaining elements in Circular Queue
+    displayQueue(q)
+
+    enQueue(q, 9)
+    enQueue(q, 20)
+    displayQueue(q)
+
+
+
