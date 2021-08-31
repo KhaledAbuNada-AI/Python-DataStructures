@@ -47,3 +47,14 @@ def deQueue(q):
         q.front = q.front.link
         q.rear.link = q.front
     return value
+
+# Function displaying the elements
+# of Circular Queue
+def displayQueue(q):
+    temp = q.front
+    print("Elements in Circular Queue are: ",
+          end=" ")
+    while temp.link != q.front:
+        print(temp.data, end=" ")
+        temp = temp.link
+    print(temp.data)
