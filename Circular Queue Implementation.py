@@ -68,7 +68,7 @@ ob = CircularQueue(5)
 ob.enqueue(120)
 ob.enqueue(180)
 ob.enqueue(163)
-ob.enqueue(155)
+ob.enqueue(100)
 ob.enqueue(69)
 ob.display()
 
