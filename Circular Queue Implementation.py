@@ -11,8 +11,8 @@ class CircularQueue():
     def enqueue(self, data):
 
         # condition if queue is full
-        if ((self.rear + 1) % self.size == self.front):
-            return (" Queue is Full\n")
+        if (self.rear + 1) % self.size == self.front:
+            return " Queue is Full\n"
 
         # condition for empty queue
         elif self.front == -1:
