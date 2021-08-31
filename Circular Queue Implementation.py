@@ -1,4 +1,4 @@
-class CircularQueue():
+class CircularQueue:
 
     # constructor
     def __init__(self, size):  # initializing the class
